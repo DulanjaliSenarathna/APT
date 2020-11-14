@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,53 +11,57 @@
 
     <ImageView
 
+        android:id="@+id/imageView2"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="40dp"
         android:src="@drawable/testlogo"
-        android:layout_marginLeft="128dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
     <TextView
-        android:layout_marginLeft="134dp"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
         android:fontFamily="@font/font"
         android:text="IPT Mobile"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp" />
-
-    <TextView
-
-        android:layout_marginLeft="112dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="For IT Professionals"
-        android:textColor="@color/colorPrimary"
-        android:textSize="13sp"
-        android:fontFamily="@font/font"/>
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.878">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/id_nic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="National ID"
-            android:padding="5dp"
-            >
+            android:padding="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:inputType="text"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
                 android:drawablePadding="10dp"
+                android:inputType="text"
 
                 />
 
@@ -68,15 +72,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
-            android:padding="5dp"
-            >
+            android:padding="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:inputType="text"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_account_circle_black_24dp"
                 android:drawablePadding="10dp"
+                android:inputType="text"
 
                 />
 
@@ -87,15 +90,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="E Mail"
-            android:padding="5dp"
-            >
+            android:padding="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:inputType="text"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_mail_black_24dp"
                 android:drawablePadding="10dp"
+                android:inputType="text"
 
                 />
 
@@ -103,86 +105,84 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/id_password"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:hint="Password">
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:padding="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:drawableStart="@drawable/ic_lock_black_24dp"
-                android:drawablePadding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:drawableStart="@drawable/ic_lock_black_24dp"
+                android:drawablePadding="10dp"
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/id_re_password"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:hint="Confirm Password">
+            android:layout_marginTop="10dp"
+            android:hint="Confirm Password"
+            android:padding="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/ic_lock_black_24dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:drawableStart="@drawable/ic_lock_black_24dp"
+                android:drawablePadding="10dp"
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
-            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
 
             <RadioButton
                 android:id="@+id/student_type"
                 android:layout_width="143dp"
                 android:layout_height="wrap_content"
                 android:text="STUDENT"
-                android:textColor="#A9A9A9"/>
+                android:textColor="#A9A9A9" />
 
             <RadioButton
-                android:layout_marginLeft="115dp"
                 android:id="@+id/company_type"
                 android:layout_width="143dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
                 android:text="INDUSTRY"
-                android:textColor="#A9A9A9"/>
+                android:textColor="#A9A9A9" />
 
         </LinearLayout>
 
 
-
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
-            app:cornerRadius="8dp"
             android:layout_marginTop="20dp"
-            android:id="@+id/btn_signup"
+            android:backgroundTint="@color/colorPrimary"
             android:minWidth="200dp"
+            android:text="SIGN UP"
             android:textSize="15sp"
-            android:text="SIGN UP">
+            app:cornerRadius="8dp">
 
         </com.google.android.material.button.MaterialButton>
 
 
-
         <Button
-            android:layout_marginTop="20dp"
             android:id="@+id/nav_log"
-            android:textColor="@color/colorPrimaryDark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:backgroundTint="#fff"
-            android:text="ALLREADY MEMBER? LOGIN HERE"/>
+            android:layout_marginTop="20dp"
+            android:text="ALLREADY MEMBER? LOGIN HERE"
+            android:textColor="@color/colorPrimaryDark"
+            app:backgroundTint="#fff" />
 
 
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
